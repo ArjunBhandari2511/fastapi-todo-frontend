@@ -9,7 +9,7 @@ const AddTask = ({ fetchTasks }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/tasks", {
+      await axios.post("https://fastapi-todo-backend.onrender.com/tasks", {
         title,
         description,
         completed: false,

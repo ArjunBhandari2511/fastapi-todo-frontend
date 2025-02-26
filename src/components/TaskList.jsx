@@ -9,7 +9,7 @@ const TaskList = ({ tasks, fetchTasks }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/tasks/${id}`);
+      await axios.delete(`https://fastapi-todo-backend.onrender.com/tasks/${id}`);
       fetchTasks(); // Refresh the task list
     } catch (error) {
       console.error("Error deleting task:", error);
@@ -24,7 +24,7 @@ const TaskList = ({ tasks, fetchTasks }) => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:8000/tasks/${editingTask.id}`, {
+      await axios.put(`https://fastapi-todo-backend.onrender.com/tasks/${editingTask.id}`, {
         title: updatedTitle,
         description: updatedDescription,
         completed: editingTask.completed,

@@ -9,7 +9,7 @@ const App = () => {
   // Fetch tasks from the backend
   const fetchTasks = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/tasks");
+      const response = await axios.get("https://fastapi-todo-backend.onrender.com/tasks");
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error);
